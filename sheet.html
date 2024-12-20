@@ -1,0 +1,23 @@
+row:<input type="number" value="0" id="r" onkeyup="ct()">
+column:<input type="number" value="0" id="c" onkeyup="ct()">
+<div id="rs"></div>
+<script>
+    function ct() {
+        let row = Number(r.value);
+        let col = Number(c.value);
+        let tbl = "";
+        if (row && col) {
+            tbl = "<table border='1px' width='100%'>";
+            for (let i = 1; i <= row; i++) {
+                tbl += "<tr>";
+                for (let j = 1; j <= col; j++) {
+                    tbl += `<td>${i},${j}</td>`;
+                }
+                tbl += "</td>";
+            }
+            tbl += "</table>";
+        }
+        rs.innerHTML = tbl;
+    }
+
+</script>

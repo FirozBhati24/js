@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" id="a">
+    <input type="number" id="b">
+    <br>
+    what to do <input type="text" onkeyup="go(this.value)">
+    <div id="rs"></div>
+    <script>
+        function go(val) {
+            switch (val) {
+                case '+':
+                case 'sum':
+                case 'add':
+                case "jod do":
+                    rs.innerText = Number(a.value) + Number(b.value);
+                    break;
+                case 'minus':
+                case 'ghato':
+                case 'subtract':
+                case "-":
+                    rs.innerText = Number(a.value) - Number(b.value);
+                    break;
+                case "*":
+                    rs.innerText = Number(a.value) * Number(b.value);
+                    break;
+                default:
+                    rs.innerText = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
